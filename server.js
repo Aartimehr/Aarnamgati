@@ -1,13 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const userRoutes = require('./routes/userRoutes'); // Import user routes
+const userRoutes = require('./routes/userRoutes'); // Ensure this path is correct
 
 const app = express();
 
 // Middleware
 app.use(cors());
-app.use(express.json()); // For parsing application/json
+app.use(express.json()); // Parse JSON request bodies
 
 // Database connection (MongoDB)
 mongoose.connect('mongodb://localhost:27017/aarnamgati', {
